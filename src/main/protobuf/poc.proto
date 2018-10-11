@@ -3,5 +3,19 @@ syntax = "proto3";
 package com.htmlism.grp;
 
 service PocService {
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
 
+  rpc ItKeepsTalking (stream HelloRequest) returns (HelloReply) {}
+
+  rpc ItKeepsReplying (HelloRequest) returns (stream HelloReply) {}
+
+  rpc StreamHellos (stream HelloRequest) returns (stream HelloReply) {}
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloReply {
+    string message = 1;
 }
