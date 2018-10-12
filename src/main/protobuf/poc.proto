@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package com.htmlism.grp;
+package com.htmlism.grpc;
 
 service PocService {
   rpc SayHello (HelloRequest) returns (HelloReply) {}
