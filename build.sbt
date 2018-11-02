@@ -1,3 +1,3 @@
-val dockerized = Project("dockerized", file("dockerized"))
+val dockerized = (project in file("dockerized"))
   .enablePlugins(AkkaGrpcPlugin)
   .enablePlugins(JavaAppPackaging)
