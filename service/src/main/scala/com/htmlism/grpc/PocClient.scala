@@ -19,7 +19,7 @@ object PocClient {
     // Take details how to connect to the service from the config.
     val clientSettings = GrpcClientSettings.fromConfig("PocSomething")
     // Create a client-side stub for the service
-    val client: PocService = new PocServiceClient(clientSettings)
+    val client: PocService = PocServiceClient(clientSettings)
 
     // Run examples for each of the exposed service methods.
     runSingleRequestReplyExample()
